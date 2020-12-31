@@ -43,5 +43,13 @@ func TestRectangle(t *testing.T) {
 	oled.Clean()
 }
 ```
+> Rectangle points are top-left (x1,y1) and bottom right (x2,y2)
 
 Now we see how we can draw rectangles, given 2 corner co-ordinates. `fill` as int is to blob fill the rectangle else there is only the outline of the rectangle
+
+```go
+func (disp *Sunding19OLED) HLine(x1, x2, y int) *Sunding19OLED
+func (disp *Sunding19OLED) VLine(x, y1, y2 int) *Sunding19OLED 
+```
+This can draw a simple horizontal / vertical line, 1px thick for the given co-ordintes 
+We havent got many examples for this since this is more likely used internally for drawing rectangle rather than lines

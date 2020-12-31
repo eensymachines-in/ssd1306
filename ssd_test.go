@@ -11,7 +11,7 @@ func TestText(t *testing.T) {
 	r := raspi.NewAdaptor()
 	r.Connect()
 	oled := NewSundingOLED("oled", r)
-	oled.ResetImage().Message(10, 10, "Pussy").Render()
+	oled.ResetImage().Message(0, 10, "Pussy").Render()
 	<-time.After(10 * time.Second)
 	oled.Clean()
 }
